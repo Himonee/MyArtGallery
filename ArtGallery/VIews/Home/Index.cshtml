@@ -1,0 +1,18 @@
+﻿@model ArtGallery.ViewModel.HomeViewModel;
+
+    <h2>@Model.Title</h2>
+    @foreach (var art in Model.Arts)
+    {
+        <div class="col-md-4 col-md-4"  style="min-height:300px;">
+            <div class="thumbnail">
+                <img src="@art.ImageThumbnailUrl" alt=""/>
+                <div class="caption">
+                    <h3 class="pull-right">@art.Price.ToString("c")</h3>
+                    <h3>@art.Name</h3>
+                    <p>@art.ShortDescription</p>
+                </div>
+            </div>
+        </div>
+
+    }
+
